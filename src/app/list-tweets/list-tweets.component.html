@@ -1,0 +1,22 @@
+<div class="search" style="display:flex; align-items: right;">  
+    <input type="text" placeholder="Search.." [(ngModel)]="hashtag">
+   <button type="submit" (click) = "search()" > Chercher</button>		
+</div> 
+<div id="container">
+  <div *ngFor="let item of tweets"  class="tweet">
+        <div    (click)="navigate(item.id)">
+             <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="{{item.url}}">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">{{item.fromUser}}</h3>
+                        <h4 class="title">{{item.text}}</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="#" ></a></li>
+                    </ul>
+              </div>
+        </div>
+  </div>
+</div>
