@@ -8,8 +8,17 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Demo
 
+1) 
 ![Image description](https://github.com/wbosoft/TwitterFront/blob/master/images/1.PNG) 
+
+2)
 ![Image description](https://github.com/wbosoft/TwitterFront/blob/master/images/2.PNG) 
+
+3)
 ![Image description](https://github.com/wbosoft/TwitterFront/blob/master/images/3.PNG) 
+
+4)
 ![Image description](https://github.com/wbosoft/TwitterFront/blob/master/images/4.PNG) 
+
+5)
 ![Image description](https://github.com/wbosoft/TwitterFront/blob/master/images/5.PNG) 
