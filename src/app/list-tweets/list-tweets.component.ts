@@ -23,6 +23,11 @@ labelHachtag :string;
   }
 
   ngOnInit() {
+    let storedHachtag = localStorage.getItem('hachtag') ; 
+    if(storedHachtag){
+      this.hashtag = storedHachtag ; 
+      this.search();
+    } 
   }
 
   search(){ 
@@ -41,8 +46,10 @@ labelHachtag :string;
     }
      this.hashtag=""; 
   }
-  navigate ( id){
-    console.log(id);
+  navigate ( id){ 
+    if(this.labelHachtag ){
+      localStorage.setItem('hachtag',this.labelHachtag);
+    }
     this.router.navigateByUrl('/tweet/'+id);
   }
 }
