@@ -5,14 +5,14 @@
 <div class="row">
       <div class="detail-tweet">
           <div class="picture">
-              <img class="img-fluid" width="60" height="60" src="{{data.url}}">
+              <img class="img-fluid" width="100" height="100" src="{{data.url}}">
                 <h3 class="name">{{data.fromUser}}</h3>
           </div>
           <div class="tweet-content"> 
               <h4 class="title">{{data.text}}</h4>
           </div>
           <div class="tweet-date"> 
-            <h4 class="createdAt">{{data.createdAt | date }}</h4>
+            <h4 class="createdAt">{{data.createdAt | date :"medium" }}</h4>
         </div>
        </div>
   </div>
