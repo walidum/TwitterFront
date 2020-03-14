@@ -109,16 +109,14 @@
   }
   .search button {
     float: left;
-    width: 10%;
-    padding: 10px;
-    background: #2196F3;
+    background: rgba(65,103,168,1);
     color: white;
     font-size: 17px;
     border: 1px solid grey;
     border-left: none;
     cursor: pointer;
-      -webkit-border-radius: 4px 0 0 4px;
-    border-radius: 4px 0 0 4px;
+      -webkit-border-radius: 4px;
+    border-radius: 4px ;
     margin-bottom: 3%;
    }
   
@@ -131,7 +129,12 @@
     clear: both;
     display: table;
   }
-    
+  .total{
+     margin-left: 2%;
+  }
+  .total span{
+       color: #1369ce;
+  }  
 /* Progress Bar */
 .progress {
   position: relative;

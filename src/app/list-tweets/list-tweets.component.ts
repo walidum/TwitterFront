@@ -12,26 +12,37 @@ export class ListTweetsComponent implements OnInit {
 tweets : any; 
 hashtag : string;
 searching  = false;
+totalShow = false; 
+totalTweets = 0; 
+labelHachtag :string; 
+
   constructor( public  api: ApiService,public router: Router) { 
     this.tweets  = [] ;
     this.hashtag = "";  
+    this.totalShow=false;
   }
 
   ngOnInit() {
+  }
+
+  search(){ 
+    if(this.hashtag.length>0){
+        this.labelHachtag= this.hashtag;
+        if(this.totalShow){
+          this.totalShow=false;
+        }
+        this.searching = !this.searching; 
+        this.api.search(this.hashtag).subscribe(response => { 
+        this.tweets = response.data ; 
+        this.totalTweets = this.tweets.length;
+        this.searching=!this.searching;
+        this.totalShow =!this.totalShow;
+      })
+    }
+     this.hashtag=""; 
   }
   navigate ( id){
     console.log(id);
     this.router.navigateByUrl('/tweet/'+id);
   }
-  search(){ 
-    this.searching = !this.searching ; 
-    if(this.hashtag.length>0){
-      this.api.search(this.hashtag).subscribe(response => { 
-        this.tweets = response.data ; 
-        this.searching=!this.searching;
-      })
-    }
-    this.hashtag=""; 
-  }
-
 }

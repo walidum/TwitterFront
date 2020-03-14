@@ -1,9 +1,12 @@
 <div class="search" style="display:flex; align-items: right;">  
-    <input type="text" placeholder="Search.." [(ngModel)]="hashtag">
-   <button type="submit" (click) = "search()" > Chercher</button>		
+    <input type="text" placeholder="Chercher.." [(ngModel)]="hashtag">
+   <button type="submit" (click) = "search()" > >></button>		
 </div> 
 <div *ngIf="searching" class="progress" >
     <div class="indeterminate"></div>
+</div>
+<div *ngIf="totalShow" class="total" >
+    <h3 class="name">Résulat de recherche du hachtag  <span >#{{labelHachtag}}</span> : <span>{{totalTweets}}</span> tweets</h3>
 </div>
 <div id="container">
   <div *ngFor="let item of tweets"  class="tweet">
