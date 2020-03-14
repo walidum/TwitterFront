@@ -11,9 +11,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ListTweetsComponent implements OnInit {
 tweets : any; 
 hashtag : string;
+searching  = false;
   constructor( public  api: ApiService,public router: Router) { 
     this.tweets  = [] ;
-    this.hashtag = "";
+    this.hashtag = "";  
   }
 
   ngOnInit() {
@@ -22,14 +23,15 @@ hashtag : string;
     console.log(id);
     this.router.navigateByUrl('/tweet/'+id);
   }
-  search(){
+  search(){ 
+    this.searching = !this.searching ; 
     if(this.hashtag.length>0){
-      this.api.search(this.hashtag).subscribe(response => {
-        console.log(response); 
+      this.api.search(this.hashtag).subscribe(response => { 
         this.tweets = response.data ; 
+        this.searching=!this.searching;
       })
     }
-    this.hashtag="";
+    this.hashtag=""; 
   }
 
 }

@@ -2,6 +2,13 @@
     <input type="text" placeholder="Search.." [(ngModel)]="hashtag">
    <button type="submit" (click) = "search()" > Chercher</button>		
 </div> 
+<div *ngIf="searching" class="progress" >
+    sdqsdqsdsqdsqd
+</div>
+<div *ngIf="searching" class="progress" >
+    qsqsqs
+    <div class="indeterminate"></div>
+  </div>
 <div id="container">
   <div *ngFor="let item of tweets"  class="tweet">
         <div    (click)="navigate(item.id)">
