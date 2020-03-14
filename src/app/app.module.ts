@@ -11,16 +11,25 @@ import { ListTweetsComponent } from './list-tweets/list-tweets.component';
 import { TweetDetailComponent } from './tweet-detail/tweet-detail.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { ApiService } from './services/api.service';
+import { DotdotdotPipe } from './dotdotdot.pipe';
 @NgModule({
    declarations: [
       AppComponent,
       ListTweetsComponent,
       TweetDetailComponent,
-      SearchBarComponent
+      SearchBarComponent,
+      DotdotdotPipe
    ],
    imports: [
-      HttpClientModule,BrowserModule, RouterModule,FormsModule, AppRoutingModule   ],
-   providers: [ApiService],
+      HttpClientModule,
+      BrowserModule,
+      RouterModule,
+      FormsModule,
+      AppRoutingModule
+   ],
+   providers: [
+      ApiService
+   ],
    bootstrap: [
       AppComponent
    ]

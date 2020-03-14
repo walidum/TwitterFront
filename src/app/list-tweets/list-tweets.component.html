@@ -5,17 +5,14 @@
 <div id="container">
   <div *ngFor="let item of tweets"  class="tweet">
         <div    (click)="navigate(item.id)">
-             <div class="our-team">
+             <div class="detail-tweet">
                     <div class="picture">
                         <img class="img-fluid" src="{{item.url}}">
                     </div>
                     <div class="team-content">
                         <h3 class="name">{{item.fromUser}}</h3>
-                        <h4 class="title">{{item.text}}</h4>
+                        <h4 class="title">{{item.text | dotdotdot:90}}</h4>
                     </div>
-                    <ul class="social">
-                        <li><a href="#" ></a></li>
-                    </ul>
               </div>
         </div>
   </div>
